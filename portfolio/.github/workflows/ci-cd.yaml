@@ -1,0 +1,56 @@
+# Name the pipeline 
+
+name: Build Test Deploy
+
+# What branches the pipeline is run on
+
+on: 
+    # Actions that trigger the pipeline
+
+  push: 
+    branches: [main]
+
+# An option to allow manual deployment of the pipeline from Actions tab
+
+workflow_dispatch: 
+
+  # Jobs are the units that make up a workflow
+
+jobs: 
+
+    # Defines one job named build-test-deploy we culd split these into three jobs
+
+  build-test-deploy:
+
+      # Tells the job what Actions runner to use matrixes can generate a maximum of 256 jobs
+
+    runs-on: ${{marix.os}}
+
+        # Strategies allow you to use matrixes
+        # I am using node-version and os as matrixes to test multiple node versions and os
+
+    strategy:
+      matrix:
+        node-version: [16.x, 17.x, 18.x]
+          os: [ubuntu-latest, windows-latest, macos-latest]
+
+    # Steps group together all the separate actions in a job each item nested below this action is a seperate action
+    # Uses specifies that we will use the v3 of the actions/checkout action it checks code against
+    
+    # With uses the actions/setup-node@v3 to install the specified versions of node, in this case out matrix
+    # Cache npm makes the setup actions smoother and require less configuration
+    # Nested all of the dependencies, build, tests and deploy to the first run command
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.Js ${{matrix.node-version}}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{matrix.node-version}}
+        cache: 'npm'
+    - run: 
+        npm i
+        cd src
+        npm i 
+        npm run build
+        npm run t a
