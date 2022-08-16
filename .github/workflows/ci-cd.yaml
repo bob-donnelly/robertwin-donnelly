@@ -10,11 +10,7 @@ on:
   push: 
     branches: [main]
 
-# An option to allow manual deployment of the pipeline from Actions tab
-
-workflow_dispatch: 
-
-  # Jobs are the units that make up a workflow
+# Jobs are the units that make up a workflow
 
 jobs: 
 
