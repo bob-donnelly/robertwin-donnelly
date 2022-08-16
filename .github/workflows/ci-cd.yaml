@@ -48,5 +48,7 @@ jobs:
         npm i
         cd portfolio/src
         npm i 
+    - run:
         npm run build
+    - run:
         npm run t a
