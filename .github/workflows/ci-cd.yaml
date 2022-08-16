@@ -32,7 +32,7 @@ jobs:
     strategy:
       matrix:
         node-version: [16.x, 17.x, 18.x]
-          os: [ubuntu-latest, windows-latest, macos-latest]
+        os: [ubuntu-latest, windows-latest, macos-latest]
 
     # Steps group together all the separate actions in a job each item nested below this action is a seperate action
     # Uses specifies that we will use the v3 of the actions/checkout action it checks code against
