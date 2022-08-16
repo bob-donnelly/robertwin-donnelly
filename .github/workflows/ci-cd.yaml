@@ -24,7 +24,7 @@ jobs:
 
       # Tells the job what Actions runner to use matrixes can generate a maximum of 256 jobs
 
-    runs-on: ${{marix.os}}
+    runs-on: ${{matrix.os}}
 
         # Strategies allow you to use matrixes
         # I am using node-version and os as matrixes to test multiple node versions and os
