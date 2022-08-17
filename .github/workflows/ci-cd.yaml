@@ -10,7 +10,8 @@ on:
   push: 
     branches: [main]
 
-permissions: ${{secrets.GITHUB_TOKEN}}
+permissions: 
+  repo-token: ${{secrets.GITHUB_TOKEN}}
 
 # Jobs are the units that make up a workflow
 
