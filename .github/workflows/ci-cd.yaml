@@ -39,7 +39,7 @@ jobs:
 
     steps:
     - uses: bob-donnelly/robertwin-donnelly/.github/workflows/ci-cd.yaml@main
-        with:
+      with:
         username: bob-donnelly
       secrets:
         token: ${{ secrets.GITHUB_TOKEN }}
