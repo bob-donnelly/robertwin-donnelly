@@ -49,8 +49,9 @@ jobs:
     - run: 
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-          npm i
-          cd portfolio/src
-          npm i 
-          npm run build
-          npm run t a
+    - run:   
+        npm i
+        cd portfolio/src
+        npm i 
+        npm run build
+        npm run t a
