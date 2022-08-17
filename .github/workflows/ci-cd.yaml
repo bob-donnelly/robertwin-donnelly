@@ -47,6 +47,8 @@ jobs:
     #     token: ${{ secrets.GITHUB_TOKEN }}
     #     node-version: ${{matrix.node-version}}
     - run: 
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
         npm i
         cd portfolio/src
         npm i 
