@@ -12,6 +12,7 @@ on:
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
 
 # Jobs are the units that make up a workflow
 
