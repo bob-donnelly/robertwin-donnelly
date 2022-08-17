@@ -10,8 +10,6 @@ on:
   push: 
     branches: [main]
 
-permissions: "${{secrets.GITHUB_TOKEN}}"
-
 # Jobs are the units that make up a workflow
 
 jobs: 
@@ -23,6 +21,10 @@ jobs:
       # Tells the job what Actions runner to use matrixes can generate a maximum of 256 jobs
 
     runs-on: ${{matrix.os}}
+
+    # Assigning permissions for the actions
+
+    permissions: ${{secrets.GITHUB_TOKEN}}
 
         # Strategies allow you to use matrixes
         # I am using node-version and os as matrixes to test multiple node versions and os
