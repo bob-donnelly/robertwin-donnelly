@@ -62,4 +62,4 @@ jobs:
     - name: Deploy
       working-directory: ./portfolio
       uses: npm run deploy-production
-        with: DEPLOY_PRIVATE_KEY
+        with: DEPLOY_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY}}
