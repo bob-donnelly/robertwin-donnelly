@@ -17,11 +17,6 @@ jobs:
     # Defines one job named build-test-deploy we culd split these into three jobs
 
   build-test-deploy:
-    uses: bob-donnelly/robertwin-donnelly/.github/workflows/ci-cd.yaml@main
-    with:
-      username: bob-donnelly
-    secrets:
-      token: ${{ secrets.GITHUB_TOKEN }}
 
       # Tells the job what Actions runner to use matrixes can generate a maximum of 256 jobs
 
@@ -43,10 +38,15 @@ jobs:
     # Nested all of the dependencies, build, tests and deploy to the first run command
 
     steps:
+    - uses: bob-donnelly/robertwin-donnelly/.github/workflows/ci-cd.yaml@main
+        with:
+        username: bob-donnelly
+      secrets:
+        token: ${{ secrets.GITHUB_TOKEN }}
     - uses: actions/checkout@v3
-    # - name: Use Node.Js ${{matrix.node-version}}
-    #   uses: actions/setup-node@v3
-    #     node-version: ${{matrix.node-version}}
+    - name: Use Node.Js ${{matrix.node-version}}
+      uses: actions/setup-node@v3
+        node-version: ${{matrix.node-version}}
     - run: 
         npm i
         cd portfolio/src
