@@ -60,6 +60,7 @@ jobs:
       working-directory: ./portfolio
       run: npm run test 
     - name: Deploy
+      env:
+        DEPLOY_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
       working-directory: ./portfolio
-      uses: npm run deploy-production
-        with: DEPLOY_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY}}
+      run: npm run deploy-production
