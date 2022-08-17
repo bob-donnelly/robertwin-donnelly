@@ -42,7 +42,7 @@ jobs:
     - name: Use Node.Js ${{matrix.node-version}}
       uses: actions/setup-node@v3
       with:
-        repo-tokn: ${{secrets.GITHUB_TOKEN}}
+        repo-token: ${{secrets.GITHUB_TOKEN}}
         node-version: ${{matrix.node-version}}
         cache: 'npm'
     - run: 
