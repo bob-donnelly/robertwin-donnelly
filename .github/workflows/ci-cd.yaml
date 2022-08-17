@@ -59,4 +59,5 @@ jobs:
       working-directory: ./portfolio
       run: npm run test 
     - name: Deploy
+      working-directory: ./portfolio
       run: npm run deploy-production
