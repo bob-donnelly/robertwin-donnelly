@@ -9,6 +9,7 @@ on:
 
   push: 
     branches: [main]
+    workflow_dispatch:
 
     # Using a environment variable to add keys to the jobs
 
