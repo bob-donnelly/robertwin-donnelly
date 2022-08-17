@@ -51,6 +51,7 @@ jobs:
       uses: actions/setup-node@v3
     - name: Change directories
       run: cd portfolio/src
+    - run: ls
     - name: Build
       run: npm run build
     - name: Test
