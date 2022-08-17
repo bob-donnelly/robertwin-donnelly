@@ -10,6 +10,9 @@ on:
   push: 
     branches: [main]
 
+  env:
+  GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+  
 # Jobs are the units that make up a workflow
 
 jobs: 
@@ -38,15 +41,9 @@ jobs:
     # Nested all of the dependencies, build, tests and deploy to the first run command
 
     steps:
-    - uses: bob-donnelly/robertwin-donnelly/.github/workflows/ci-cd.yaml@main
-      with:
-        username: bob-donnelly
-      secrets:
-        token: ${{ secrets.GITHUB_TOKEN }}
     - uses: actions/checkout@v3
     - name: Use Node.Js ${{matrix.node-version}}
       uses: actions/setup-node@v3
-      node-version: ${{matrix.node-version}}
     - run: 
         npm i
         cd portfolio/src
