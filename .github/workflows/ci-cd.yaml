@@ -52,5 +52,6 @@ jobs:
     - name: Build Test Deploy
       working-directory: ./portfolio/src
       run: 
+        npm i
         npm run build
         npm run t a
