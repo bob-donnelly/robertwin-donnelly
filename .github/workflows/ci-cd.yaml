@@ -43,8 +43,8 @@ jobs:
       GITHUB _TOKEN: ${{secrets.GITHUB_TOKEN}}
     - name: Use Node.Js ${{matrix.node-version}}
       uses: actions/setup-node@v3
-        node-version: ${{matrix.node-version}}
-        cache: 'npm'
+      node-version: ${{matrix.node-version}}
+      cache: 'npm'
     - run: 
 
         npm i
