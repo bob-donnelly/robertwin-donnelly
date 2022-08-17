@@ -10,9 +10,12 @@ on:
   push: 
     branches: [main]
 
+    # Using a environment variable to add keys to the jobs
+
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+  PRIVATE_SSH_KEY: ${{ secrets.PRIVATE_SSH_KEY }}
 
 # Jobs are the units that make up a workflow
 
@@ -31,7 +34,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [14.x, 16.x, 18.x]
         os: [ubuntu-latest, windows-latest, macos-latest]
 
     # Steps group together all the separate actions in a job each item nested below this action is a seperate action
@@ -48,7 +51,6 @@ jobs:
     - run: 
         npm i
         cd portfolio/src
-    - run: 
         npm i 
         npm run build
         npm run t a
