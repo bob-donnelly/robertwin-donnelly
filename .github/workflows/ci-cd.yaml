@@ -50,11 +50,11 @@ jobs:
     - name: Use Node.Js ${{matrix.node-version}}
       uses: actions/setup-node@v3
     - name: Install Dependencies
-      working-directory: ./portfolio/src
+      working-directory: ./portfolio
       run: npm install
     - name: Build
-      working-directory: ./portfolio/src
+      working-directory: ./portfolio
       run: npm run build 
     - name: Test
-      working-directory: ./portfolio/src
+      working-directory: ./portfolio
       run: npm run test 
