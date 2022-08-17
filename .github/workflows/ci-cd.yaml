@@ -57,4 +57,4 @@ jobs:
       run: npm run build &
     - name: Test
       working-directory: ./portfolio/src
-      run: npm run test a
+      run: npm run test 
