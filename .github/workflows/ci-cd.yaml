@@ -61,4 +61,5 @@ jobs:
       run: npm run test 
     - name: Deploy
       working-directory: ./portfolio
-      run: npm run deploy-production
+      uses: npm run deploy-production
+        with: DEPLOY_PRIVATE_KEY
