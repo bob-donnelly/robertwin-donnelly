@@ -62,5 +62,4 @@ jobs:
     - name: Deploy
       working-directory: ./portfolio
       run: 
-        ssh -i ${{ secrets.DEPLOY_PRIVATE_KEY }} ci-cd@159.65.11.166
         npm run deploy-production
