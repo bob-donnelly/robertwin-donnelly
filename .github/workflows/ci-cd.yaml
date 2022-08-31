@@ -60,6 +60,7 @@ jobs:
       working-directory: ./portfolio
       run: npm run test 
     - name: Deploy
-      run: ssh -i server-portfolio ci-cd@159.65.11.166
       working-directory: ./portfolio
-      run: npm run deploy-production
+      run: 
+        ssh -i server-portfolio ci-cd@159.65.11.166
+        npm run deploy-production
