@@ -16,8 +16,6 @@ on:
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  DEPLOY_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
-  PRIVATE_KNOWN_HOSTS: ${{ secrets.PRIVATE_KNOWN_HOSTS }}
 
 # Jobs are the units that make up a workflow
 
@@ -59,7 +57,13 @@ jobs:
     - name: Test
       working-directory: ./portfolio
       run: npm run test 
-    - name: Deploy
-      working-directory: ./portfolio
-      run: 
-        npm run deploy-production
+    - name: Deployment
+      uses: appleboy/scp-action@master
+      env:
+        SSH_HOST: ${{ secrets.SSH_HOST }}
+        SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
+        SSH_PORT: ${{ secrets.SSH_PORT }}
+        PRIVATE_SSH_KEY: ${{ secrets.PRIVATE_SSH_KEY }}
+      with:
+        source: "./portfolio/build/*"
+        target: "/var/www/portfolio"
