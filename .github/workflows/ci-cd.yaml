@@ -7,18 +7,17 @@ name: Build Test Deploy
 on: 
     # Actions that trigger the pipeline
 
+  workflow_dispatch:
+  
   push: 
     branches: [main]
-    workflow_dispatch:
 
     # Using a environment variable to add keys to the jobs
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
   DEPLOY_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
-  PRIVATE_SSH_KEY: ${{ secrets.PRIVATE_SSH_KEY }}
-  PRIVATE_KNOWN_HOSTS: ${{ secrets.PRIVATE_KNOWN_HOSTS }}
+
 
 # Jobs are the units that make up a workflow
 
