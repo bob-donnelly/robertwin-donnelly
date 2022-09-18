@@ -15,7 +15,7 @@ const WorkExperience = () => {
                 <p>
                     This is a description of the workplace.
                 </p>
-                <img src={WorkplaceOne} alt="Wireframes showing an application in the design phase." />
+                <img src={WorkplaceOne} alt="Two storey building with lights on and a lawn in front of it." />
             </div>
 
             <div className="project-card">
@@ -23,7 +23,7 @@ const WorkExperience = () => {
                 <p>
                     This is a description of the workplace.
                 </p>
-                <img src={WorkplaceTwo} alt="Graphs showing statistics such as users, time used, and what the application is used for." />
+                <img src={WorkplaceTwo} alt="Coworkers around a table collaborating." />
             </div>
 
             <div className="project-card">
@@ -31,7 +31,7 @@ const WorkExperience = () => {
                 <p>
                     This is a description of the workplace.
                 </p>
-                <img src={WorkplaceThree} alt="Developer signing up and using microsoft official courses." />
+                <img src={WorkplaceThree} alt="Developers around a table programming." />
             </div>
         </div>
     )
