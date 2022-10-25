@@ -6,7 +6,7 @@ const Contact = () => {
         <><div className="contact-page">
             <p> Contact me through the field below or through the email on my CV! </p>
 
-            <img src={Resume} alt="Developers around a table programming." />
+            <img src={Resume} alt="A resume or curriculum vitae for the developer." />
         </div>
         
         <form>

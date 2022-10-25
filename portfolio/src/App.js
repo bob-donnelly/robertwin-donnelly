@@ -6,10 +6,12 @@ import Home from './components/home';
 import Projects from './components/projects';
 import WorkExperience from './components/work-experience';
 import Contact from './components/contact';
+import Navbar from './components/header';
 
 function App() {
   return (
     <div className="App">
+      <Navbar />
       <Home />
       <Projects />
       <WorkExperience />
