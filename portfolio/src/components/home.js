@@ -1,5 +1,6 @@
 import '../css/main.css';
 import Dev from '../assets/images/dev.svg';
+
 const Home = () => {
     return (
         <div className="home-page">
