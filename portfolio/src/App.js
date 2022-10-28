@@ -1,6 +1,6 @@
 // import logo from './assets/images/logo.svg';
 import './css/main.css';
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Home from './components/home';
 import Projects from './components/projects';
@@ -10,13 +10,18 @@ import Navbar from './components/header';
 
 function App() {
   return (
-    <div className="App">
+
+      <Router>
       <Navbar />
-      <Home />
-      <Projects />
-      <WorkExperience />
-      <Contact />
-    </div>
+      <main> 
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/projects" element={ <Projects /> } />
+        <Route exact path="/work-experience" element={ <WorkExperience /> } />
+        <Route exact path="/contact" element={ <Contact /> } />
+        </Routes>
+    </main>
+    </Router>
   );
 }
 

@@ -7,7 +7,7 @@ import ProjectThree from '../assets/images/project-three.svg';
 const Projects = () => {
     return (
         <div className="projects-page">
-            <p>
+            <p className="project-intro">
                 Here are some of my projects!
             </p>
             <div className="project-card">
@@ -15,8 +15,10 @@ const Projects = () => {
                 <p>
                     This is a description of the project.
                 </p>
+                
                 <img src={ProjectOne} alt="Wireframes showing an application in the design phase." />
-                <p>Link to source on Github</p>
+                
+                <a href="https://github.com">Link to source on Github</a>
             </div>
 
             <div className="project-card">
@@ -25,7 +27,8 @@ const Projects = () => {
                     This is a description of the project.
                 </p>
                 <img src={ProjectTwo} alt="Graphs showing statistics such as users, time used, and what the application is used for." />
-                <p>Link to source on Github</p>
+
+                <a href="https://github.com">Link to source on Github</a>
             </div>
 
             <div className="project-card">
@@ -34,7 +37,8 @@ const Projects = () => {
                     This is a description of the project.
                 </p>
                 <img src={ProjectThree} alt="Developer signing up and using microsoft official courses." />
-                <p>Link to source on Github</p>
+
+                <a href="https://github.com">Link to source on Github</a>
             </div>
         </div>
     )

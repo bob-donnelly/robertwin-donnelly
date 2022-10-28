@@ -3,6 +3,7 @@ body {
   font: 100% Neue Haas Grotesk Text, Helvetica, Arial;
   color: #fff;
   background: #315582;
+  overflow: auto;
 }
 
 .home-page {
@@ -12,54 +13,213 @@ body {
 }
 
 .home-page img {
-  max-width: 100%;
+  max-width: 96%;
   min-width: 20%;
   height: auto;
 }
 
 .intro {
   height: 100%;
+  padding: 2rem 2rem 2rem 2rem;
 }
 
 .navbar {
-  width: 100%;
+  width: 98%;
+  min-width: 20%;
   height: 110px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 1rem;
-  z-index: 50;
 }
 
 .navbar-logo img {
-  font-size: 1.4rem;
-  cursor: pointer;
+  max-width: 100%;
+  min-width: 20%;
+  height: auto;
+}
+
+.moon img {
+  max-width: 100%;
+  min-width: 20%;
+  height: auto;
+  padding-right: 2rem;
+}
+
+.button {
+  background: #315582;
 }
 
 .navbar-links {
   display: flex;
+  width: 100%;
+  object-fit: cover;
+  justify-content: space-evenly;
   list-style: none;
   align-items: center;
+  padding: 1rem 1rem 1rem 1rem;
   background-color: #2C2C3E;
 }
 
 .navbar-links > li {
-  padding-left: 1.5rem;
+  font-size: 100%;
 }
 
 .navbar-links > li > a {
   text-decoration: none;
-  font-size: 1.2rem;
   display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.navbar-links > li > a > span:hover {
+  color: #315582;
+}
+
+.project-intro {
+  padding-top: 2rem;
+}
+
+.projects-page {
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
-.navbar-links > li > a > span {
+.project-card {
   display: flex;
-  align-items: center;
-  margin: 8px;
+  flex-direction: column;
+  border: solid 5px;
+  flex-wrap: wrap;
+  margin: 1rem 1rem 1rem 1rem;
+  padding: 1rem 1rem 1rem 1rem;
+  background-color: #2C2C3E;
 }
 
+.project-card img {
+  object-fit: cover;
+  min-width: 20%;
+  height: auto;
+  padding: 1rem 1rem 1rem 1rem;
+  border: solid 2px;
+}
 
+.project-card a {
+  justify-content: center;
+  color: #fff;
+  border: solid 2px;
+  padding: 1rem;
+}
+
+.project-card a:hover {
+  color: #315582;
+}
+
+.work-intro {
+  padding-top: 2rem;
+}
+
+.work-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.work-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border: solid 5px;
+  flex-wrap: wrap;
+  margin: 1rem 1rem 1rem 1rem;
+  padding: 1rem 1rem 1rem 1rem;
+  background-color: #2C2C3E;
+}
+
+.work-card img {
+  object-fit: cover;
+  min-width: 20%;
+  height: auto;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  border: solid 2px;
+}
+
+.work-card p {
+  width: 70%;
+  justify-content: center;
+  color: #fff;
+  padding: 1rem;
+}
+
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-page p {
+  padding-top: 2rem;
+}
+
+.contact-page img {
+  background: #2C2C3E;
+  max-width: 40%;
+  height: auto;
+  padding: 2rem 2rem 2rem 2rem;
+  border: solid 5px;
+}
+
+.form {
+  margin-top: 1rem;
+  padding-top: 2rem;
+  border: solid 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  max-width: 100%;
+  min-width: 20%;
+  background: #2C2C3E;
+}
+
+.name {
+  width: 40%;
+  margin-left: 10%;
+  padding-bottom: 2rem;
+  border-radius: 20%;
+}
+
+.email {
+  width: 40%;
+}
+
+.subject {
+  width: 40%;
+  margin-left: 10%;
+}
+
+.title {
+  width: 40%;
+}
+
+.message {
+  max-width: 100%;
+  min-width: 20%;
+  height: auto;
+  padding: 2rem;
+}
+
+.send-message {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 2rem 2rem 2rem 2rem;
+  margin-left: 30%;
+}
+
+.send-message button {
+  max-width: 100%;
+  min-width: 20%;
+}
 
 /*# sourceMappingURL=main.css.map */
